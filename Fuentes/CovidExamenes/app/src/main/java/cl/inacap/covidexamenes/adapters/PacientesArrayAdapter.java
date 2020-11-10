@@ -44,8 +44,7 @@ public class PacientesArrayAdapter extends ArrayAdapter<Pacientes> {
         Pacientes actual = pacientes.get(position);
         nombreTv.setText(actual.getNombre());
         apellidoTv.setText(actual.getApellido());
-        temperaturaTv.setText((int) actual.getTemperatura());
-        presionTv.setText(actual.getPresion());
+
         rutTv.setText(actual.getRut());
         fechaTv.setText(actual.getFecha());
         areaTv.setText(actual.getArea());
