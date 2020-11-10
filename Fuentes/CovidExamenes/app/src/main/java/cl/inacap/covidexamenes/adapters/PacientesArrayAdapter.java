@@ -42,6 +42,15 @@ public class PacientesArrayAdapter extends ArrayAdapter<Pacientes> {
         TextView covidTv = fila.findViewById(R.id.covid_pc_lv);
         TextView tosTv = fila.findViewById(R.id.tos_pc_lv);
         Pacientes actual = pacientes.get(position);
+        nombreTv.setText(actual.getNombre());
+        apellidoTv.setText(actual.getApellido());
+        temperaturaTv.setText((int) actual.getTemperatura());
+        presionTv.setText(actual.getPresion());
+        rutTv.setText(actual.getRut());
+        fechaTv.setText(actual.getFecha());
+        areaTv.setText(actual.getArea());
+        covidTv.setText(actual.getsCovid());
+        tosTv.setText(actual.getTos());
         return fila;
     }
 }
