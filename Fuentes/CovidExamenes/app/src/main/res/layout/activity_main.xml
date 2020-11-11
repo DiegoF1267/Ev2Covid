@@ -18,7 +18,8 @@ tools:context=".MainActivity">
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="25sp"
-            android:text="Nombre"></TextView>
+            android:textColor="@color/colorPrimary"
+            android:text="Nombre :"></TextView>
 
         <EditText
             android:id="@+id/idNombreTxt"
@@ -37,7 +38,8 @@ tools:context=".MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textSize="25sp"
-                android:text="Contraseña"></TextView>
+                android:textColor="@color/colorPrimary"
+                android:text="Contraseña :"></TextView>
 
             <EditText
                 android:layout_width="match_parent"
