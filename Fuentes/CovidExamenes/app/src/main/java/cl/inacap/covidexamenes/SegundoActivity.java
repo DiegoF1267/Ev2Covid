@@ -1,0 +1,37 @@
+package cl.inacap.covidexamenes;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import android.os.Bundle;
+import android.widget.ListView;
+
+import java.util.List;
+
+import cl.inacap.covidexamenes.adapters.PacientesArrayAdapter;
+import cl.inacap.covidexamenes.dao.PacienteDAOLista;
+import cl.inacap.covidexamenes.dao.PacientesDAO;
+import cl.inacap.covidexamenes.dto.Pacientes;
+
+public class SegundoActivity extends AppCompatActivity {
+    private ListView pacientesLv;
+    private List<Pacientes> pacientes;
+    private PacientesArrayAdapter adaptador;
+    private PacientesDAO pacientesDAO = PacienteDAOLista.getInstance();
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_segundo);
+        this.setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        pacientes = pacientesDAO.getAll();
+        adaptador = new PacientesArrayAdapter(this,R.layout.pacientes_list, pacientes);
+        pacientesLv = findViewById(R.id.pacientes_lv);
+        pacientesLv.setAdapter(adaptador);
+    }
+
+
+
+
+}
