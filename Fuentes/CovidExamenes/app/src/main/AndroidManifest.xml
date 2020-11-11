@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".CuartoActivity"></activity>
-        <activity android:name=".TercerActivity" />
         <activity android:name=".SegundoActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

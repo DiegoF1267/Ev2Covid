@@ -54,7 +54,7 @@ tools:context=".MainActivity">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Iniciar Sesión"
-        android:id="@+id/tercer_btn"></Button>
+        android:id="@+id/segundo_btn"></Button>
 
 
 

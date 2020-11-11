@@ -4,7 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
 
@@ -18,12 +23,15 @@ public class SegundoActivity extends AppCompatActivity {
     private List<Pacientes> pacientes;
     private PacientesArrayAdapter adaptador;
     private PacientesDAO pacientesDAO = PacienteDAOLista.getInstance();
+    private Button cuartoBtn;
+
 
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +44,18 @@ public class SegundoActivity extends AppCompatActivity {
         adaptador = new PacientesArrayAdapter(this,R.layout.pacientes_list, pacientes);
         pacientesLv = findViewById(R.id.pacientes_lv);
         pacientesLv.setAdapter(adaptador);
+
+
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
     }
 
 

@@ -34,22 +34,15 @@ public class PacientesArrayAdapter extends ArrayAdapter<Pacientes> {
         View fila = inflater.inflate(R.layout.pacientes_list, null, true);
         TextView nombreTv = fila.findViewById(R.id.nombre_pc_lv);
         TextView apellidoTv = fila.findViewById(R.id.apellido_pc_lv);
-        TextView temperaturaTv = fila.findViewById(R.id.temperatura_pc_lv);
-        TextView presionTv = fila.findViewById(R.id.presion_pc_lv);
+
         TextView rutTv = fila.findViewById(R.id.rut_pc_lv);
         TextView fechaTv = fila.findViewById(R.id.fecha_pc_lv);
-        TextView areaTv = fila.findViewById(R.id.area_pc_lv);
-        TextView covidTv = fila.findViewById(R.id.covid_pc_lv);
-        TextView tosTv = fila.findViewById(R.id.tos_pc_lv);
         Pacientes actual = pacientes.get(position);
         nombreTv.setText(actual.getNombre());
         apellidoTv.setText(actual.getApellido());
 
         rutTv.setText(actual.getRut());
         fechaTv.setText(actual.getFecha());
-        areaTv.setText(actual.getArea());
-        covidTv.setText(actual.getsCovid());
-        tosTv.setText(actual.getTos());
         return fila;
     }
 }
