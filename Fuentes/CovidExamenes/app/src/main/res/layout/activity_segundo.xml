@@ -10,7 +10,12 @@
     <include layout="@layout/toolbar"></include>
 
 
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lista de Pacientes"
+        android:textSize="@dimen/titulo_app_size"
+        android:textColor="@color/colorPrimary"></TextView>
 
     <ListView
         android:id="@+id/pacientes_lv"

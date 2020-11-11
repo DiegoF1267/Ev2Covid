@@ -12,16 +12,16 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button segundoBtn;
+    private Button tercerBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        segundoBtn = findViewById(R.id.segundo_btn);
-        segundoBtn.setOnClickListener(new View.OnClickListener() {
+        tercerBtn = findViewById(R.id.tercer_btn);
+        tercerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this,SegundoActivity.class);
+                Intent i = new Intent(MainActivity.this,TercerActivity.class);
                 startActivity(i);
             }
         });
