@@ -252,7 +252,7 @@ public class CuartoActivity extends AppCompatActivity {
         }
     }
 
-    public void onclick2 (View view){
+    public void onclick2 (View view) {
         if (view.getId() == R.id.idSwitch) {
 
         }
