@@ -45,7 +45,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:inputType="number"
                 android:layout_marginEnd="15dp"
                 android:gravity="center_horizontal"
                 android:textColor="@color/colorPrimaryDark"
@@ -126,18 +125,10 @@
                 android:textSize="20dp"></TextView>
 
 
-            <TextView
-                android:id="@+id/idTextViewfecha"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="dd/mm/yy"
-                android:layout_marginEnd="15dp"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20dp"></TextView>
+
 
             <Button
-                android:id="@+id/idDatePicker"
+                android:id="@+id/fechaid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -198,7 +189,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="40dp"
-                android:onClick="onclick"></Switch>
+                android:onClick="Onclick"></Switch>
 
         </LinearLayout>
         <LinearLayout
