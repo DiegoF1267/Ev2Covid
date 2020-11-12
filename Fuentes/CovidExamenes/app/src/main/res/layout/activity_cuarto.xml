@@ -280,7 +280,15 @@
 
         </LinearLayout>
 
-
+        <Button
+            android:layout_marginTop="@dimen/magin_top_lv"
+            android:id="@+id/idbtn_agrgegar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input"
+            android:text="Agregar"
+            android:layout_marginHorizontal="150dp"
+            android:textColor="@color/colorPrimaryDark"></Button>
     </LinearLayout>
 </ScrollView>
 

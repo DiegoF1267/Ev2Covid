@@ -22,8 +22,8 @@ public class PacienteDAOLista implements PacientesDAO {
         p.setTos("no");
         pacientes.add(p);
         p = new Pacientes();
-        p.setNombre("pene");
-        p.setApellido("pene");
+        p.setNombre("Jeyzon");
+        p.setApellido("Godoy");
         p.setArea("otro");
         p.setFecha("20/05/2020");
         p.setPresion(80);
