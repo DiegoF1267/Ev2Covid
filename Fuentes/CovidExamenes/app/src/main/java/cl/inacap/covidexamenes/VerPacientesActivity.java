@@ -3,6 +3,7 @@ package cl.inacap.covidexamenes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -22,10 +23,21 @@ public class VerPacientesActivity extends AppCompatActivity {
     private TextView tosTxt;
     private TextView presionInt;
 
+
+
     @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+    @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_pacientes);
+        this.setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        this.getSupportActionBar().setDisplayShowHomeEnabled(true);
         this.toolbar=findViewById(R.id.toolbar);
         this.nombreTxt=findViewById(R.id.nombrePaTxt);
         this.apellidoTxt=findViewById(R.id.apellidoPaTxt);
@@ -36,6 +48,10 @@ public class VerPacientesActivity extends AppCompatActivity {
         this.areaTxt=findViewById(R.id.areaPaTxt);
         this.covidTxt=findViewById(R.id.covidPaTxt);
         this.tosTxt=findViewById(R.id.tosPaTxt);
+
+
+
+
         //falta arreglar esto
         //this.temperaturaDou.setText((int) pacientes.getTemperatura());
         //this.presionInt.setText(pacientes.getPresion());

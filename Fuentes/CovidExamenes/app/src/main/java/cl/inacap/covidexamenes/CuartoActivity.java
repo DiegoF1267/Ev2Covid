@@ -7,13 +7,15 @@ import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import java.util.Calendar;
 
 public class CuartoActivity extends AppCompatActivity {
 
-
+     Switch switchE;
+     Switch switchO;
     private TextView fecha;
 
     @Override
@@ -30,8 +32,9 @@ public class CuartoActivity extends AppCompatActivity {
         this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         this.getSupportActionBar().setDisplayShowHomeEnabled(true);
         this.fecha = findViewById(R.id.idTextViewfecha);
+
     }
-    
+
     public void abrirCalendario(View view) {
         Calendar cal = Calendar.getInstance();
         int anio = cal.get(Calendar.YEAR);
@@ -47,4 +50,21 @@ public class CuartoActivity extends AppCompatActivity {
         }, anio, mes, dia);
         dpd.show();
     }
+
+    public void onclick (View view){
+        if (view.getId()==R.id.idSwitch){
+
+
+            }
+        }
+
+
+
+    public void onclick2 (View view){
+        if (view.getId()==R.id.idSwitch){
+
+
+        }
+    }
+
 }

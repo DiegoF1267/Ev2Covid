@@ -29,19 +29,10 @@ public class SegundoActivity extends AppCompatActivity {
 
 
     @Override
-    public boolean onSupportNavigateUp() {
-        onBackPressed();
-        return true;
-    }
-
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segundo);
-        this.setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
-        this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        this.getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         pacientes = pacientesDAO.getAll();
         adaptador = new PacientesArrayAdapter(this,R.layout.pacientes_list, pacientes);
         pacientesLv = findViewById(R.id.pacientes_lv);
