@@ -62,8 +62,8 @@ public class SegundoActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent i = new Intent(SegundoActivity.this,CuartoActivity.class);
+                startActivity(i);
             }
         });
 
