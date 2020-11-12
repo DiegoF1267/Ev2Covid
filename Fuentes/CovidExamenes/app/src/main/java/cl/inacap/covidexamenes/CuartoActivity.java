@@ -156,9 +156,7 @@ public class CuartoActivity extends AppCompatActivity {
                     pacDAO.save(p);
                     startActivity(new Intent(CuartoActivity.this, SegundoActivity.class));
                 } else {
-                    Toast.makeText(CuartoActivity.this,
-                            "F",
-                            Toast.LENGTH_SHORT).show();
+                   //aca va el alert dialog
                 }
 
             }
