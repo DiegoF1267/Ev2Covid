@@ -31,6 +31,7 @@ public class CuartoActivity extends AppCompatActivity {
         this.getSupportActionBar().setDisplayShowHomeEnabled(true);
         this.fecha = findViewById(R.id.idTextViewfecha);
     }
+    
     public void abrirCalendario(View view) {
         Calendar cal = Calendar.getInstance();
         int anio = cal.get(Calendar.YEAR);
