@@ -85,4 +85,6 @@ public class Pacientes implements Serializable {
     public void setArea(String area) {
         this.area = area;
     }
+
+
 }
