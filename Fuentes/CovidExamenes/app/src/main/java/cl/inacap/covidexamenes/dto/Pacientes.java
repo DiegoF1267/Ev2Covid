@@ -1,6 +1,9 @@
 package cl.inacap.covidexamenes.dto;
 
-public class Pacientes {
+import java.io.Serializable;
+
+public class Pacientes implements Serializable {
+
     private String nombre;
     private String apellido;
     private int presion;

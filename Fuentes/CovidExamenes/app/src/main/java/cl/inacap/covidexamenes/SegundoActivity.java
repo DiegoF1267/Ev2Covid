@@ -3,8 +3,10 @@ package cl.inacap.covidexamenes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -44,6 +46,15 @@ public class SegundoActivity extends AppCompatActivity {
         adaptador = new PacientesArrayAdapter(this,R.layout.pacientes_list, pacientes);
         pacientesLv = findViewById(R.id.pacientes_lv);
         pacientesLv.setAdapter(adaptador);
+        pacientesLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(SegundoActivity.this,VerPacientesActivity.class);
+                Pacientes pacActual= pacientes.get(i);
+                intent.putExtra("paciente", pacActual);
+                startActivity(intent);
+            }
+        });
 
 
 
