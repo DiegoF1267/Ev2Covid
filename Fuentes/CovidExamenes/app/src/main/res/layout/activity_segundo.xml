@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     tools:context=".SegundoActivity">
 
 
@@ -15,12 +16,12 @@
 
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Lista de Pacientes"
-        android:textSize="@dimen/titulo_app_size"
-        android:layout_weight="1"
-        android:textColor="@color/colorPrimary"></TextView>
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Lista de Pacientes"
+    android:textSize="@dimen/titulo_app_size"
+    android:layout_weight="1"
+    android:textColor="@color/colorPrimaryDark"></TextView>
 
 
 
@@ -38,10 +39,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
+        android:layout_margin="20dp"
         android:contentDescription="jeje"
-        android:src="@drawable/mas" />
-
+        android:src="@drawable/mas"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
 </LinearLayout>

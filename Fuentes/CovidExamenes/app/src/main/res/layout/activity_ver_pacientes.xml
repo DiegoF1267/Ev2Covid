@@ -11,20 +11,28 @@
         android:layout_marginTop="@dimen/magin_top_lv"
         android:orientation="horizontal">
 
+
         <TextView
+            android:layout_marginStart="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Nombre"
+            android:text="Nombre:"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/nombrePaTxt"
+            android:background="@drawable/input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/colorAccent"
+            android:inputType="number"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
             android:textSize="20dp"></TextView>
+
 
     </LinearLayout>
 
@@ -35,18 +43,24 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_marginStart="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Apellido"
+            android:text="Apellido:"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/apellidoPaTxt"
+            android:background="@drawable/input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/colorAccent"
+            android:inputType="number"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
             android:textSize="20dp"></TextView>
 
     </LinearLayout>
@@ -58,20 +72,25 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_marginStart="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Temperatura"
+            android:text="Temperatura:"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/temperaturaPaDou"
+            android:background="@drawable/input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/colorAccent"
+            android:inputType="number"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
             android:textSize="20dp"></TextView>
-
     </LinearLayout>
 
     <LinearLayout
@@ -81,18 +100,24 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_marginStart="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Presión arterial"
+            android:text="Presión Arterial:"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/presionPaint"
+            android:background="@drawable/input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/colorAccent"
+            android:inputType="number"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
             android:textSize="20dp"></TextView>
 
     </LinearLayout>
@@ -104,18 +129,24 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_marginStart="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Rut del Paciente"
+            android:text="Rut Paciente:"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/rutPaTxt"
+            android:background="@drawable/input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/colorAccent"
+            android:inputType="number"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
             android:textSize="20dp"></TextView>
 
     </LinearLayout>
@@ -127,18 +158,24 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_marginStart="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Fecha de Examen"
+            android:text="Fecha Examen:"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/fechaPaTxt"
+            android:background="@drawable/input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/colorAccent"
+            android:inputType="number"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
             android:textSize="20dp"></TextView>
 
     </LinearLayout>
@@ -150,18 +187,24 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_marginStart="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Area de trabajo"
+            android:text="Area de Trabajo:"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/areaPaTxt"
+            android:background="@drawable/input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/colorAccent"
+            android:inputType="number"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
             android:textSize="20dp"></TextView>
 
     </LinearLayout>
@@ -173,18 +216,24 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_marginStart="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="¿Presenta sintomas de covid?"
+            android:text="¿Presenta sintomas de Covid?"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/covidPaTxt"
+            android:background="@drawable/input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/colorAccent"
+            android:inputType="number"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
             android:textSize="20dp"></TextView>
 
     </LinearLayout>
@@ -196,18 +245,24 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_marginStart="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="¿Presenta tos?"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/tosPaTxt"
+            android:background="@drawable/input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/colorAccent"
+            android:inputType="number"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
             android:textSize="20dp"></TextView>
 
     </LinearLayout>

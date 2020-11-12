@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Opciones">
+        <item>Atención al publico</item>
+        <item>Otro</item>
+    </string-array>
+
+</resources>

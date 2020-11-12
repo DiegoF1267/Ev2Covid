@@ -14,9 +14,15 @@
         android:layout_height="wrap_content"
         android:text="Registro de Paciente"
         android:textSize="@dimen/titulo_app_size"
-        android:textColor="@color/colorPrimary"></TextView>
+        android:textColor="@color/colorPrimaryDark"></TextView>
 
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,216 +31,260 @@
             android:orientation="horizontal">
 
             <TextView
+                android:layout_marginStart="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Rut:"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="20dp"></TextView>
 
             <EditText
+                android:background="@drawable/input"
                 android:id="@+id/rut"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:inputType="number"
-                android:textColor="@color/colorPrimary"
+                android:layout_marginEnd="15dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="20dp"></EditText>
 
         </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/magin_top_lv"
-        android:orientation="horizontal">
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Nombre: "
-            android:textColor="@color/colorPrimary"
-            android:textSize="20dp"></TextView>
+            android:layout_marginTop="@dimen/magin_top_lv"
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/nombre"
+            <TextView
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nombre: "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"></TextView>
+
+            <EditText
+                android:id="@+id/nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:inputType="text"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/input"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"></EditText>
+
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="text"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20dp"></EditText>
+            android:layout_marginTop="@dimen/magin_top_lv"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Apellido:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"></TextView>
+
+            <EditText
+                android:id="@+id/apellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="15dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center_horizontal"
+                android:background="@drawable/input"
+                android:inputType="text"
+                android:textSize="20dp"></EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fecha del examen"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"></TextView>
+
+
+            <TextView
+                android:id="@+id/idTextViewfecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="dd/mm/yy"
+                android:layout_marginEnd="15dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp"></TextView>
+
+            <Button
+                android:id="@+id/idDatePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:background="@drawable/btn_fecha"
+                android:onClick="abrirCalendario"
+                android:layout_marginEnd="15dp"
+                android:text="Ingresar fecha"
+                android:textColor="@color/colorPrimaryDark"></Button>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/magin_top_lv"
+            android:layout_marginVertical="@dimen/magin_top_lv"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Area de Trabajo"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"></TextView>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorCeleste"
+                android:layout_marginEnd="40dp"
+                android:id="@+id/idSpinner" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/magin_top_lv"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Presenta sintomas de covid?"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"></TextView>
+
+            <Switch
+                android:id="@+id/idSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:onClick="onclick"></Switch>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/magin_top_lv"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Temperatura"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"></TextView>
+
+            <EditText
+                android:id="@+id/idTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/input"
+                android:gravity="center_horizontal"
+                android:inputType="numberDecimal"
+                ></EditText>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/magin_top_lv"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Presenta tos?"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"></TextView>
+
+            <Switch
+                android:id="@+id/idSwitch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:onClick="onclick2"></Switch>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/magin_top_lv"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Presión arterial"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"></TextView>
+
+            <EditText
+                android:id="@+id/idPresion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="15dp"
+                android:inputType="number"
+                android:gravity="center_horizontal"
+                android:background="@drawable/input"
+                ></EditText>
+
+        </LinearLayout>
+
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/magin_top_lv"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Apellido:"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20dp"></TextView>
-
-        <EditText
-            android:id="@+id/apellido"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="@color/colorPrimary"
-            android:inputType="text"
-            android:textSize="20dp"></EditText>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="@dimen/magin_top_lv">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="Fecha del examen"
-            android:textColor="@color/colorPrimary"></TextView>
+</ScrollView>
 
 
-        <TextView
-            android:id="@+id/idTextViewfecha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="dd/mm/yy"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20dp"></TextView>
-
-        <Button
-            android:id="@+id/idDatePicker"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="abrirCalendario"
-            android:background="@color/colorPrimaryDark"
-            android:textColor="@color/colorPrimary"
-            android:text="Ingresar fecha"></Button>
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/magin_top_lv"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Area de Trabajo"
-            android:textSize="20dp"></TextView>
-
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            ></Spinner>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/magin_top_lv"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Presenta sintomas de covid?"
-            android:textSize="20dp"></TextView>
-
-        <Switch
-            android:id="@+id/idSwitch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onclick"></Switch>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/magin_top_lv"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Temperatura"
-            android:textSize="20dp"></TextView>
-
-        <EditText
-            android:id="@+id/idTemp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="numberDecimal"
-            ></EditText>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/magin_top_lv"
-        android:orientation="horizontal">
-
-        <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Presenta tos?"
-            android:textSize="20dp"></TextView>
-
-        <Switch
-            android:id="@+id/idSwitch2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onclick2"></Switch>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/magin_top_lv"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Presión arterial"
-            android:textSize="20dp"></TextView>
-
-        <EditText
-            android:id="@+id/idPresion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="number"
-            ></EditText>
-
-    </LinearLayout>
 
 
 

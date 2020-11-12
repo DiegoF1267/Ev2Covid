@@ -6,7 +6,10 @@ import androidx.appcompat.widget.Toolbar;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
+import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -14,6 +17,7 @@ import java.util.Calendar;
 
 public class CuartoActivity extends AppCompatActivity {
 
+    Spinner opciones;
      Switch switchE;
      Switch switchO;
     private TextView fecha;
@@ -32,6 +36,11 @@ public class CuartoActivity extends AppCompatActivity {
         this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         this.getSupportActionBar().setDisplayShowHomeEnabled(true);
         this.fecha = findViewById(R.id.idTextViewfecha);
+
+        opciones =(Spinner)findViewById(R.id.idSpinner);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Opciones, android.R.layout.simple_spinner_item);
+        opciones.setAdapter(adapter);
 
     }
 
@@ -57,7 +66,6 @@ public class CuartoActivity extends AppCompatActivity {
 
             }
         }
-
 
 
     public void onclick2 (View view){

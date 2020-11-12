@@ -1,68 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorAzul"
+    tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:text="Bienvenido"
+        android:textColor="@color/colorBlanco"
+        android:textSize="@dimen/titulo_app_size"></TextView>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:orientation="horizontal">
 
- <LinearLayout
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:layout_marginTop="300dp"
-     android:orientation="horizontal">
 
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="25sp"
             android:layout_centerHorizontal="true"
-            android:textColor="@color/colorPrimary"
-            android:text="Nombre :"></TextView>
+            android:layout_weight="1"
+            android:text="         Nombre :"
+            android:textColor="@color/colorBlanco"
+            android:textSize="25sp"></TextView>
 
         <EditText
             android:id="@+id/idNombreTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Ingrese Nombre"></EditText>
- </LinearLayout>
+            android:layout_marginEnd="15dp"
+            android:background="@color/colorBlanco"
+            android:hint="      Ingrese Nombre"></EditText>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:orientation="horizontal">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="25sp"
-                android:textColor="@color/colorPrimary"
-                android:text="Contraseña :"></TextView>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="textPassword" ></EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="       Contraseña :"
+            android:textColor="@color/colorBlanco"
+            android:textSize="25sp"></TextView>
+
+        <EditText
+            android:id="@+id/idClaveTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlanco"
+            android:layout_weight="1"
+            android:layout_marginEnd="15dp"
+            android:inputType="textPassword"></EditText>
 
     </LinearLayout>
 
 
     <Button
         android:id="@+id/segundo_btn"
-        android:layout_marginTop="30dp"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Iniciar Sesión"></Button>
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_login"
+        android:text="Iniciar Sesión"
+        android:textColor="@color/colorBlanco"
+        android:textSize="20dp"></Button>
 
 
 </LinearLayout>

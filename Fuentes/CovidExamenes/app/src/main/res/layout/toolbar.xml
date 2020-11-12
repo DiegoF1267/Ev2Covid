@@ -4,7 +4,7 @@
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorAzul"
     android:minHeight="?attr/actionBarSize"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
@@ -15,6 +15,7 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:layout_marginTop="10dp"
             android:layout_width="@dimen/imagenLogo"
             android:layout_height="@dimen/imagenLogo"
             android:src="@drawable/ic_hospital"></ImageView>
@@ -24,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_left_titulo_app"
             android:gravity="center"
-            android:text="CONSULTA DEL LIMON"
+            android:text="Consulta Don Limon"
             android:textSize="@dimen/titulo_app_size"
             android:textStyle="bold"></TextView>
     </LinearLayout>

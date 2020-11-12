@@ -8,14 +8,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/magin_top_lv"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal">
 
         <TextView
+            android:layout_marginStart="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Nombre"
+            android:text="Nombre:"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp"></TextView>
 
         <TextView
@@ -23,7 +25,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/colorAccent"
+            android:background="@drawable/input"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp"></TextView>
 
     </LinearLayout>
@@ -35,10 +39,12 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_marginStart="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Apellido"
+            android:text="Apellido:"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp"></TextView>
 
         <TextView
@@ -46,7 +52,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/colorAccent"
+            android:background="@drawable/input"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
             android:textSize="20dp"></TextView>
 
     </LinearLayout>
@@ -60,10 +68,12 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_marginStart="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Rut del Paciente"
+            android:text="Rut Paciente:"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp"></TextView>
 
         <TextView
@@ -71,7 +81,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/colorAccent"
+            android:background="@drawable/input"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
             android:textSize="20dp"></TextView>
 
     </LinearLayout>
@@ -83,10 +95,12 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_marginStart="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Fecha de Examen"
+            android:text="Fecha Examen:"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp"></TextView>
 
         <TextView
@@ -94,7 +108,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/colorAccent"
+            android:background="@drawable/input"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+
             android:textSize="20dp"></TextView>
 
     </LinearLayout>
