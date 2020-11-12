@@ -11,12 +11,10 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
 
 import cl.inacap.covidexamenes.adapters.PacientesArrayAdapter;
-import cl.inacap.covidexamenes.dao.PacienteDAOLista;
 import cl.inacap.covidexamenes.dao.PacientesDAO;
 import cl.inacap.covidexamenes.dao.PacientesDAOSQLite;
 import cl.inacap.covidexamenes.dto.Pacientes;
