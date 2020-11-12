@@ -12,12 +12,17 @@ tools:context=".MainActivity">
  <LinearLayout
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
+     android:layout_marginTop="300dp"
      android:orientation="horizontal">
+
+
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="25sp"
+            android:layout_centerHorizontal="true"
             android:textColor="@color/colorPrimary"
             android:text="Nombre :"></TextView>
 
@@ -32,6 +37,7 @@ tools:context=".MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal">
             <TextView
                 android:layout_width="match_parent"
@@ -46,19 +52,17 @@ tools:context=".MainActivity">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:inputType="textPassword" ></EditText>
+
     </LinearLayout>
 
 
-
     <Button
-        android:layout_width="match_parent"
+        android:id="@+id/segundo_btn"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Iniciar Sesión"
-        android:id="@+id/segundo_btn"></Button>
-
-
-
-
+        android:layout_gravity="center_horizontal"
+        android:text="Iniciar Sesión"></Button>
 
 
 </LinearLayout>
