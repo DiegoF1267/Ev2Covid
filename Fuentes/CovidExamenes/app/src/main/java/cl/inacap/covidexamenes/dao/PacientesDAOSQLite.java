@@ -16,7 +16,7 @@ public class PacientesDAOSQLite implements PacientesDAO {
     private PacientesSQLiteHelpers  pacHelper;
 
     public  PacientesDAOSQLite(Context context){
-        this.pacHelper= new PacientesSQLiteHelpers(context,"DBPacientes",null,2);
+        this.pacHelper= new PacientesSQLiteHelpers(context,"DBPacientes",null,5);
     }
 
     @Override
@@ -27,7 +27,7 @@ public class PacientesDAOSQLite implements PacientesDAO {
             if(reader != null){
                 Cursor c = reader.rawQuery("SELECT rut,nombre,apellido,fecha,"+
                         "area,covid,temperatura,tos,presion"+
-                        "FROM pacientes",null);
+                        " FROM pacientes",null);
                 if (c.moveToFirst()){
                     do{
                         Pacientes p = new Pacientes();
@@ -41,7 +41,6 @@ public class PacientesDAOSQLite implements PacientesDAO {
                         p.setTos(c.getString(7));
                         p.setPresion(c.getInt(8));
                         pacientes.add(p);
-
                     }while (c.moveToNext());
                 }
                 reader.close();

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -30,12 +31,14 @@ public class SegundoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segundo);
         this.setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
         this.pacientesLv=findViewById(R.id.pacientes_lv);
         this.fab=findViewById(R.id.fab);
         pacientes = pacientesDAO.getAll();
+
         pacientesLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -53,6 +56,7 @@ public class SegundoActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
 
     }
 

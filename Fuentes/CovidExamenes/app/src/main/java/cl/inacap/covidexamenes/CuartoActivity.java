@@ -17,6 +17,7 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -36,18 +37,18 @@ public class CuartoActivity extends AppCompatActivity {
     Switch switchO;
 
     private Button fechaTxt;
-    private EditText rutPacienteTxt;
+    private EditText rut;
     private EditText nombreTxt;
     private EditText apellidoTxt;
-    private Calendar calendario = Calendar.getInstance();
-    private Spinner spinnerAreaTrabajo;
-    private Switch switchSintomasCovid;
+    private Calendar fecha = Calendar.getInstance();
+    private Spinner areaSpn;
+    private Switch covidSwt;
     private EditText temperaturaTxt;
-    private Switch switchPresentaTos;
+    private Switch tosSwt;
     private Toolbar toolbar;
-    private EditText presionArterialTxt;
+    private EditText presionTxt;
     private Button agregarPacienteBtn;
-    private PacientesDAO pDAO = new PacientesDAOSQLite(this);
+    private PacientesDAO pacDAO = new PacientesDAOSQLite(this);
 
     @Override
     public boolean onSupportNavigateUp() {
@@ -64,14 +65,14 @@ public class CuartoActivity extends AppCompatActivity {
         this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         this.getSupportActionBar().setDisplayShowHomeEnabled(true);
         this.fechaTxt = findViewById(R.id.fechaid);
-        this.rutPacienteTxt = findViewById(R.id.rut);
+        this.rut = findViewById(R.id.rut);
         this.nombreTxt = findViewById(R.id.nombre);
         this.apellidoTxt = findViewById(R.id.apellido);
-        this.spinnerAreaTrabajo = findViewById(R.id.idSpinner);
-        this.switchPresentaTos = findViewById(R.id.idSwitch2);
-        this.switchSintomasCovid = findViewById(R.id.idSwitch);
+        this.areaSpn = findViewById(R.id.idSpinner);
+        this.tosSwt = findViewById(R.id.idSwitch2);
+        this.covidSwt = findViewById(R.id.idSwitch);
         this.temperaturaTxt = findViewById(R.id.idTemp);
-        this.presionArterialTxt = findViewById(R.id.idPresion);
+        this.presionTxt = findViewById(R.id.idPresion);
         this.agregarPacienteBtn = findViewById(R.id.agregar_btn);
 
         opciones = (Spinner) findViewById(R.id.idSpinner);
@@ -86,18 +87,22 @@ public class CuartoActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 List<String> errores = new ArrayList<>();
-                String rutStr = rutPacienteTxt.getText().toString().trim();
+                String rutStr = rut.getText().toString().trim();
                 String nombreStr = nombreTxt.getText().toString().trim();
                 String apellidoStr = apellidoTxt.getText().toString().trim();
                 String fechaStr = "";
-                String areaTrabajoStr = spinnerAreaTrabajo.getSelectedItem().toString();
+                String areaStr = areaSpn.getSelectedItem().toString();
                 String temperaturaStr = temperaturaTxt.getText().toString().trim();
-                String sintomasCovidStr = "";
-                String presionArterialStr = presionArterialTxt.getText().toString().trim();
-                if (switchSintomasCovid.isChecked()) {
-                    sintomasCovidStr = "Sí";
+                String covidStr = "";
+                String presionStr = presionTxt.getText().toString().trim();
+                String tosStr = "";
+                Date fechaUsuario = fecha.getTime();
+                Date fechaActual = new Date();
+
+                if (covidSwt.isChecked()) {
+                    covidStr = "Sí";
                 } else {
-                    sintomasCovidStr = "No";
+                    covidStr = "No";
                 }
                 double temperaturaDou = 0;
                 if (temperaturaStr.isEmpty()) {
@@ -108,17 +113,16 @@ public class CuartoActivity extends AppCompatActivity {
                         errores.add("La teperatura debe ser mayor que 20°");
                     }
                 }
-                String presentaTosStr = "";
-                if (switchPresentaTos.isChecked()) {
-                    presentaTosStr = "Sí";
+                if (tosSwt.isChecked()) {
+                    tosStr = "Sí";
                 } else {
-                    presentaTosStr = "No";
+                    tosStr = "No";
                 }
-                int presionArterial = 0;
-                if (presionArterialStr.isEmpty()) {
+                int presion = 0;
+                if (presionStr.isEmpty()) {
                     errores.add("Debe Ingresar La Presion Arterial");
                 } else {
-                    presionArterial = Integer.parseInt(presionArterialStr);
+                    presion = Integer.parseInt(presionStr);
                 }
 
                 if (verificarRut(rutStr) == false) {
@@ -131,6 +135,12 @@ public class CuartoActivity extends AppCompatActivity {
                     errores.add("Debe Ingresar Un Apellido");
                 }
 
+                if(fechaUsuario.before(fechaActual)){
+                   // errores.add("La fecha ingresada es de un dia anterior al actual");
+                }else{
+                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy",Locale.US);
+                    fechaStr = sdf.format(fecha.getTime());
+                }
 
                 if (errores.isEmpty()) {
                     Pacientes p = new Pacientes();
@@ -138,15 +148,17 @@ public class CuartoActivity extends AppCompatActivity {
                     p.setNombre(nombreStr);
                     p.setApellido(apellidoStr);
                     p.setFecha(fechaStr);
-                    p.setArea(areaTrabajoStr);
-                    p.setsCovid(sintomasCovidStr);
+                    p.setArea(areaStr);
+                    p.setsCovid(covidStr);
                     p.setTemperatura(temperaturaDou);
-                    p.setTos(presentaTosStr);
-                    p.setPresion(presionArterial);
-                    pDAO.save(p);
+                    p.setTos(tosStr);
+                    p.setPresion(presion);
+                    pacDAO.save(p);
                     startActivity(new Intent(CuartoActivity.this, SegundoActivity.class));
                 } else {
-
+                    Toast.makeText(CuartoActivity.this,
+                            "F",
+                            Toast.LENGTH_SHORT).show();
                 }
 
             }

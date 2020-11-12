@@ -59,7 +59,7 @@ public class VerPacientesActivity extends AppCompatActivity {
             this.nombreTxt.setText(pacientes.getNombre());
             this.apellidoTxt.setText(pacientes.getApellido());
             this.temperaturaDou.setText(pacientes.getTemperatura()+" ° ");
-            this.presionInt.setText(pacientes.getPresion());
+            this.presionInt.setText(pacientes.getPresion()+"");
             this.rutTxt.setText(pacientes.getRut());
             this.fechaTxt.setText(pacientes.getFecha());
             this.areaTxt.setText(pacientes.getArea());

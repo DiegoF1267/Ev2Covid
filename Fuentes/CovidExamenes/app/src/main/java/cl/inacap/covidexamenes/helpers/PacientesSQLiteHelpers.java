@@ -9,15 +9,15 @@ import androidx.annotation.Nullable;
 public class PacientesSQLiteHelpers extends SQLiteOpenHelper {
 
     private final String sqlCreate="CREATE TABLE " +
-            "pacientes(rut TEXT NOT NULL PRIMARY KEY" +
+            "pacientes(rut TEXT NOT NULL PRIMARY KEY " +
             ",nombre TEXT" +
             ",apellido TEXT" +
             ",fecha TEXT" +
             ",area TEXT" +
             ",covid TEXT" +
             ",temperatura REAL" +
-            ",Tos TEXT" +
-            ",presionINTEGER)";
+            ",tos TEXT" +
+            ",presion INTEGER)";
 
     public PacientesSQLiteHelpers(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);

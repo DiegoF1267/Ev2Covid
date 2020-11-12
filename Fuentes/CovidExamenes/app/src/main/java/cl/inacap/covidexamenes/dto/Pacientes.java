@@ -86,5 +86,11 @@ public class Pacientes implements Serializable {
         this.area = area;
     }
 
-
+    @Override
+    public String toString() {
+        return rut +
+                nombre +
+                apellido +
+                fecha;
+    }
 }
