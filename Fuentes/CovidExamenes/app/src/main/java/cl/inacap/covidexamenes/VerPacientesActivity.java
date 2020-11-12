@@ -52,16 +52,14 @@ public class VerPacientesActivity extends AppCompatActivity {
 
 
 
-        //falta arreglar esto
-        //this.temperaturaDou.setText((int) pacientes.getTemperatura());
-        //this.presionInt.setText(pacientes.getPresion());
+
         this.setSupportActionBar(this.toolbar);
         if(getIntent() !=null){
             Pacientes pacientes =(Pacientes) getIntent().getSerializableExtra("paciente");
             this.nombreTxt.setText(pacientes.getNombre());
             this.apellidoTxt.setText(pacientes.getApellido());
-
-
+            this.temperaturaDou.setText(pacientes.getTemperatura()+" ° ");
+            this.presionInt.setText(pacientes.getPresion());
             this.rutTxt.setText(pacientes.getRut());
             this.fechaTxt.setText(pacientes.getFecha());
             this.areaTxt.setText(pacientes.getArea());
