@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,6 +27,7 @@ public class PacientesArrayAdapter extends ArrayAdapter<Pacientes> {
         this.pacientes = objects;
     }
 
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -36,11 +38,18 @@ public class PacientesArrayAdapter extends ArrayAdapter<Pacientes> {
         TextView apellidoTv = fila.findViewById(R.id.apellido_pc_lv);
         TextView rutTv = fila.findViewById(R.id.rut_pc_lv);
         TextView fechaTv = fila.findViewById(R.id.fecha_pc_lv);
+        ImageView advertencia = fila.findViewById(R.id.simbolo);
         Pacientes actual = pacientes.get(position);
         nombreTv.setText(actual.getNombre());
         apellidoTv.setText(actual.getApellido());
         rutTv.setText(actual.getRut());
         fechaTv.setText(actual.getFecha());
+
+
+        if (actual.getsCovid().equalsIgnoreCase("sí")){
+            advertencia.setImageResource(R.drawable.warning);
+        }
         return fila;
+
     }
 }

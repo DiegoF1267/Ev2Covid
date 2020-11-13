@@ -28,7 +28,10 @@
             android:background="@drawable/input"
             android:gravity="center_horizontal"
             android:textColor="@color/colorPrimaryDark"
+            android:layout_marginRight="15dp"
             android:textSize="20dp"></TextView>
+
+
 
     </LinearLayout>
 
@@ -55,6 +58,7 @@
             android:background="@drawable/input"
             android:textColor="@color/colorPrimaryDark"
             android:gravity="center_horizontal"
+            android:layout_marginRight="15dp"
             android:textSize="20dp"></TextView>
 
     </LinearLayout>
@@ -84,6 +88,7 @@
             android:background="@drawable/input"
             android:textColor="@color/colorPrimaryDark"
             android:gravity="center_horizontal"
+            android:layout_marginRight="15dp"
             android:textSize="20dp"></TextView>
 
     </LinearLayout>
@@ -110,10 +115,21 @@
             android:layout_weight="1"
             android:background="@drawable/input"
             android:textColor="@color/colorPrimaryDark"
+            android:layout_marginRight="15dp"
             android:gravity="center_horizontal"
-
             android:textSize="20dp"></TextView>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/simbolo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            ></ImageView>
     </LinearLayout>
 
 

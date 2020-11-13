@@ -157,6 +157,19 @@ public class CuartoActivity extends AppCompatActivity {
                     startActivity(new Intent(CuartoActivity.this, SegundoActivity.class));
                 } else {
                    //aca va el alert dialog
+                    String msj="";
+                    for(String e:errores){
+                         msj+= "-" + e + "\n";
+                    }
+                    AlertDialog.Builder alertBuilder = new AlertDialog.Builder(CuartoActivity.this);
+                    alertBuilder
+                            .setTitle("Error de Valición")
+                            .setMessage(msj)
+                            .setPositiveButton("Aceptar",null)
+                            .create()
+                            .show();
+
+
                 }
 
             }
